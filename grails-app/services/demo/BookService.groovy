@@ -7,14 +7,14 @@ import groovy.transform.CompileStatic
 @CompileStatic
 class BookService {
 
-    @Transactional(connection = 'books')
+    @Transactional('books')
     Book saveBook(String name) {
         Book book = new Book(title: name)
         book.save()
         book
     }
 
-    @ReadOnly(connection = 'books')
+    @ReadOnly('books')
     List<Book> findAll() {
         Book.where { }.list() as List<Book>
     }
