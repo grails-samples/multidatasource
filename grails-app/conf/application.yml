@@ -108,3 +108,8 @@ dataSources:
         password: ''
         dbCreate: create-drop
         url: jdbc:h2:mem:booksDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+---
+grails:
+  transaction:
+    chainedTransactionManagerPostProcessor:
+      enabled: true
